@@ -9,8 +9,9 @@ function normalizeBase(basePath) {
 
 function getBasePath() {
   if (process.env.VITE_BASE_PATH) return normalizeBase(process.env.VITE_BASE_PATH);
-  const [owner, repoName] = String(process.env.GITHUB_REPOSITORY || '').split('/');
-  if (!owner || !repoName) return '/';
+  const parts = String(process.env.GITHUB_REPOSITORY || '').split('/');
+  if (parts.length !== 2 || !parts[0] || !parts[1]) return '/';
+  const [owner, repoName] = parts;
   if (process.env.GITHUB_ACTIONS === 'true') {
     if (repoName.toLowerCase() === `${owner.toLowerCase()}.github.io`) return '/';
     return normalizeBase(repoName);

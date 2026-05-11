@@ -16,8 +16,7 @@ function shortLabel(text) {
 function getPagesUrl() {
   const explicitUrl = (import.meta.env.VITE_APP_PUBLIC_URL || '').trim();
   if (explicitUrl) return explicitUrl;
-  if (typeof window !== 'undefined') return new URL(import.meta.env.BASE_URL || '/', window.location.origin).toString();
-  return '/';
+  return import.meta.env.BASE_URL || '/';
 }
 
 export function TopBar({ onBack, isHome }) {
