@@ -13,10 +13,15 @@ function shortLabel(text) {
   return clean.length > 20 ? `${clean.slice(0, 19)}...` : clean;
 }
 
+function getPagesUrl() {
+  const explicitUrl = (import.meta.env.VITE_APP_PUBLIC_URL || '').trim();
+  if (explicitUrl) return explicitUrl;
+  if (typeof window !== 'undefined') return new URL(import.meta.env.BASE_URL || '/', window.location.origin).toString();
+  return '/';
+}
+
 export function TopBar({ onBack, isHome }) {
-  const pagesUrl =
-    (import.meta.env.VITE_APP_PUBLIC_URL || '').trim() ||
-    (typeof window !== 'undefined' ? new URL(import.meta.env.BASE_URL || '/', window.location.origin).toString() : '/');
+  const pagesUrl = getPagesUrl();
   const audioRef = useRef(null);
   const timerRef = useRef(null);
   const [stations, setStations] = useState([]);
