@@ -6,6 +6,7 @@ import path from 'node:path';
 
 const app = express();
 const port = Number(process.env.PORT || 3001);
+const host = process.env.HOST || '0.0.0.0';
 const PYTHON = process.env.PYTHON || 'python';
 const SWIPL = process.env.SWIPL || 'swipl';
 
@@ -58,8 +59,8 @@ app.post('/api/judge/prolog', async (req, res) => {
   }
 });
 
-app.listen(port, '127.0.0.1', () => {
-  console.log(`IA Quest judge rodando em http://127.0.0.1:${port}`);
+app.listen(port, host, () => {
+  console.log(`IA Quest judge rodando em http://${host}:${port}`);
 });
 
 const pythonExercises = {
