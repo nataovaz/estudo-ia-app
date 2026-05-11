@@ -475,10 +475,10 @@ mae(X, Y) :- mulher(X), genitor(X, Y).
   ),
   codeq(
     'Atividade 2: indice em lista',
-    '% Implemente encontraind(Valor, Lista, Indice).
+    `% Implemente encontraind(Valor, Lista, Indice).
 % Indice deve comecar em 0.
 % Exemplo: encontraind(7,[3,41,27,7,18],X) => X = 3.
-',
+`,
     '',
     [
       { label: 'Definiu encontraind/3', regex: 'encontraind\\s*\\(' },
@@ -499,10 +499,10 @@ mae(X, Y) :- mulher(X), genitor(X, Y).
   ),
   codeq(
     'Atividade 3: multiplicacao de listas',
-    '% Implemente multi(L1, L2, R).
+    `% Implemente multi(L1, L2, R).
 % Quando as listas tem tamanhos diferentes, continue com os elementos restantes.
 % Exemplo: multi([2,4,5],[4,3,2,6,8,9],R) => R = [8,12,10,6,8,9].
-',
+`,
     '',
     [
       { label: 'Definiu multi/3', regex: 'multi\\s*\\(' },
