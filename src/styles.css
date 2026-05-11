@@ -23,6 +23,8 @@
   .back-btn:hover, .icon-btn:hover { border-color:#c8d1dd; color:var(--ink); }
   .utility-row { display:flex; gap:10px; align-items:center; justify-content:flex-end; flex-wrap:wrap; }
   .pill { display:inline-flex; align-items:center; gap:8px; border:1px solid var(--line); background:#fff; border-radius:999px; padding:8px 12px; font-size:.88rem; font-weight:800; color:var(--muted); }
+  .pages-link { text-decoration:none; color:#1b2230; border-color:#c8d1dd; background:#f3f6fb; }
+  .pages-link:hover { background:#e9f2ff; color:var(--blue-dark); }
   .pill strong { color:var(--ink); }
   .mini-btn { border:0; border-radius:999px; padding:7px 10px; background:#eef3f8; color:var(--ink); font-weight:900; }
   .range { width:82px; accent-color:var(--blue); }

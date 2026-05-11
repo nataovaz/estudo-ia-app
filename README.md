@@ -2,6 +2,8 @@
 
 Aplicação React + Vite para estudar IA N1 com exercícios, revisão e judge local guiado para Prolog/Python.
 
+GitHub Pages: https://nataovaz.github.io/estudo-ia-app/
+
 ## Requisitos
 
 - Node.js LTS

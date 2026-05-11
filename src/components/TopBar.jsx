@@ -14,6 +14,7 @@ function shortLabel(text) {
 }
 
 export function TopBar({ onBack, isHome }) {
+  const pagesUrl = 'https://nataovaz.github.io/estudo-ia-app/';
   const audioRef = useRef(null);
   const timerRef = useRef(null);
   const [stations, setStations] = useState([]);
@@ -139,6 +140,9 @@ export function TopBar({ onBack, isHome }) {
           <span>IA Quest N1</span>
         </div>
         <div className="utility-row">
+          <a className="pill pages-link" href={pagesUrl} target="_blank" rel="noreferrer" title="Abrir GitHub Pages">
+            GitHub Pages ↗
+          </a>
           <div className="pill" title="Rádio lofi via Radio Browser API">
             <button className="mini-btn" onClick={toggleLofi}>{isLofi ? 'Ⅱ' : '▶'}</button>
             <strong>{shortLabel(lofiLabel)}</strong>
