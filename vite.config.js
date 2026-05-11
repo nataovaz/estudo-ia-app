@@ -9,7 +9,8 @@ function normalizeBase(basePath) {
 
 function getBasePath() {
   if (process.env.VITE_BASE_PATH) return normalizeBase(process.env.VITE_BASE_PATH);
-  const repoName = process.env.GITHUB_REPOSITORY?.split('/')[1];
+  const [owner, repoName] = String(process.env.GITHUB_REPOSITORY || '').split('/');
+  if (!owner || !repoName) return '/';
   if (process.env.GITHUB_ACTIONS === 'true' && repoName) return normalizeBase(repoName);
   return '/';
 }
