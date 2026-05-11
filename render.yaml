@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: ia-quest-judge
+    env: node
+    plan: free
+    buildCommand: npm ci
+    startCommand: npm start
+    autoDeploy: true
+    envVars:
+      - key: CORS_ORIGIN
+        value: "*"
