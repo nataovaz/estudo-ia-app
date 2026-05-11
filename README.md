@@ -34,9 +34,9 @@ Ou execute `start-dev.cmd` na pasta do projeto.
 
 Este deploy publica apenas o frontend. O judge local (Prolog/Python) nao funciona no GitHub Pages.
 
-1) Confirme que o repositorio se chama `estudo-ia-app`.
-2) Faça push para a branch `main`.
-3) No GitHub, abra Settings -> Pages e selecione "GitHub Actions".
+1) Faça push para a branch `main`.
+2) No GitHub, abra Settings -> Pages e selecione "GitHub Actions".
+3) O workflow ajusta a base do Vite automaticamente usando o nome do repositório.
 
 A URL final fica assim:
 
